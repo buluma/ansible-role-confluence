@@ -14,9 +14,10 @@ galaxy_info:
     - name: EL
       versions:
         - all
-    - name: opensuse
-      versions:
-        - all
+    # TODO: build opensuse in generator
+    # - name: opensuse
+      # versions:
+        # - all
     - name: Debian
       versions:
         - all
