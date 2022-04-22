@@ -257,7 +257,6 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 |---------|----|
 |ubuntu|all|
 |el|all|
-|opensuse|all|
 |debian|all|
 |fedora|all|
 
