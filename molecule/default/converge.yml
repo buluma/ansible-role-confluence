@@ -10,5 +10,5 @@
 
     - name: include role
       ansible.builtin.include_role:
-        name: confluence
+        name: ansible-role-confluence
       tags: confluence
