@@ -22,7 +22,7 @@ This example is taken from `molecule/default/converge.yml` and is tested on each
 
     - name: include role
       ansible.builtin.include_role:
-        name: confluence
+        name: buluma.confluence
       tags: confluence
 ```
 
