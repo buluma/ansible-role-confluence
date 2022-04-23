@@ -6,8 +6,8 @@
   tasks:
     - name: check if ports are open
       ansible.builtin.wait_for:
-        port: "{{ item }}"
-        timeout: 2
+      port: "{{ item }}"
+      timeout: 2
       loop:
         - "8090"
       changed_when: false
@@ -20,4 +20,4 @@
       register: result
       failed_when: false
       changed_when: false
-        # - "'confluence' not in result.content"
+      # - "'confluence' not in result.content"
