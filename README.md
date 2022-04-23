@@ -17,7 +17,7 @@ This example is taken from `molecule/default/converge.yml` and is tested on each
   tasks:
     - name: include role
       ansible.builtin.include_role:
-        name: openjdk
+        name: buluma.openjdk
       tags: openjdk
 
     - name: include role
@@ -35,6 +35,11 @@ The machine needs to be prepared. In CI this is done using `molecule/default/pre
   remote_user: root
   become: true
   gather_facts: false
+
+  roles:
+    - role: buluma.bootstrap
+    - role: buluma.openjdk
+
   tasks:
     - name: redhat | subscription-manager register
       ansible.builtin.raw: |
@@ -166,21 +171,6 @@ The machine needs to be prepared. In CI this is done using `molecule/default/pre
 The default values for the variables are set in `defaults/main.yml`:
 ```yaml
 ---
-
-# (c) Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
 # PostgreSQL JDBC release.
 postgresql_jdbc_release: "42.3"
 
@@ -241,7 +231,8 @@ The following roles are used to prepare a system. You can prepare your system in
 
 | Requirement | GitHub | GitLab |
 |-------------|--------|--------|
-|[openjdk](https://galaxy.ansible.com/buluma/openjdk)|[![Build Status GitHub](https://github.com/buluma/openjdk/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/openjdk/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/openjdk/badges/master/pipeline.svg)](https://gitlab.com/buluma/openjdk)|
+|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-bootstrap/badges/main/pipeline.svg)](https://gitlab.com/buluma/ansible-role-bootstrap)|
+|[buluma.openjdk](https://galaxy.ansible.com/buluma/openjdk)|[![Build Status GitHub](https://github.com/buluma/ansible-role-openjdk/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-openjdk/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-openjdk/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-openjdk)|
 
 ## [Context](#context)
 
