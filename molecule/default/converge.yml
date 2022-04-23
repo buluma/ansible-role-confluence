@@ -5,7 +5,7 @@
   tasks:
     - name: include role
       ansible.builtin.include_role:
-        name: openjdk
+        name: buluma.openjdk
       tags: openjdk
 
     - name: include role
