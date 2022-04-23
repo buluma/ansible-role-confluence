@@ -4,17 +4,17 @@
   become: yes
   gather_facts: no
   tasks:
-   - name: check if ports are open
-     ansible.builtin.wait_for:
-      port: "{{ item }}"
-      timeout: 2
-     loop:
-       - "8090"
+    - name: check if ports are open
+      ansible.builtin.wait_for:
+        port: "{{ item }}"
+        timeout: 2
+      loop:
+        - "8090"
 
-   - name: see if the sample index.html returns 200
-     ansible.builtin.uri:
-       url: "http://127.0.0.1:8090/"
-       return_content: yes
-     register: result
-     failed_when:
-       - "'confluence' not in result.content"
+    - name: see if the sample index.html returns 200
+      ansible.builtin.uri:
+        url: "http://127.0.0.1:8090/"
+        return_content: yes
+      register: result
+      failed_when:
+        - "'confluence' not in result.content"
