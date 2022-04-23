@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-confluence/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-confluence/compare/0.1.0...HEAD)
+
+**Merged pull requests:**
+
+- Update verify.yml [\#1](https://github.com/buluma/ansible-role-confluence/pull/1) ([buluma](https://github.com/buluma))
+
 ## [0.1.0](https://github.com/buluma/ansible-role-confluence/tree/0.1.0) (2022-04-22)
 
 [Full Changelog](https://github.com/buluma/ansible-role-confluence/compare/0a98a027423d8226cfd181d005bb84dba72bb333...0.1.0)
