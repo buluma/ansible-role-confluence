@@ -1,6 +1,5 @@
 ---
 roles:
-  - name: buluma.bootstrap
   - name: openjdk
     src: https://github.com/alvistack/ansible-role-openjdk
     version: develop
