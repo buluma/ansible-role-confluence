@@ -1,5 +1,7 @@
 ---
 - hosts: all
+  max_fail_percentage: 30
+  serial: 10
   remote_user: root
   become: true
   gather_facts: false

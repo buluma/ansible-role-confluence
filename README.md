@@ -4,7 +4,7 @@ Ansible Role for Atlassian Confluence Installation
 
 |GitHub|GitLab|Quality|Downloads|Version|Issues|Pull Requests|
 |------|------|-------|---------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-confluence/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-confluence/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-confluence/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-confluence)|[![quality](https://img.shields.io/ansible/quality/)](https://galaxy.ansible.com/buluma/confluence)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/buluma/confluence)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-confluence.svg)](https://github.com/buluma/ansible-role-confluence/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-confluence.svg)](https://github.com/buluma/ansible-role-confluence/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-confluence.svg)](https://github.com/buluma/ansible-role-confluence/pulls/)|
+|[![github](https://github.com/buluma/ansible-role-confluence/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-confluence/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-confluence/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-confluence)|[![quality](https://img.shields.io/ansible/quality/58927)](https://galaxy.ansible.com/buluma/confluence)|[![downloads](https://img.shields.io/ansible/role/d/58927)](https://galaxy.ansible.com/buluma/confluence)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-confluence.svg)](https://github.com/buluma/ansible-role-confluence/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-confluence.svg)](https://github.com/buluma/ansible-role-confluence/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-confluence.svg)](https://github.com/buluma/ansible-role-confluence/pulls/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -22,7 +22,7 @@ This example is taken from `molecule/default/converge.yml` and is tested on each
 
     - name: include role
       ansible.builtin.include_role:
-        name: confluence
+        name: buluma.confluence
       tags: confluence
 ```
 
@@ -30,6 +30,8 @@ The machine needs to be prepared. In CI this is done using `molecule/default/pre
 ```yaml
 ---
 - hosts: all
+  max_fail_percentage: 30
+  serial: 10
   remote_user: root
   become: true
   gather_facts: false
@@ -164,20 +166,6 @@ The machine needs to be prepared. In CI this is done using `molecule/default/pre
 The default values for the variables are set in `defaults/main.yml`:
 ```yaml
 ---
-
-# (c) Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
 
 # PostgreSQL JDBC release.
 postgresql_jdbc_release: "42.3"
