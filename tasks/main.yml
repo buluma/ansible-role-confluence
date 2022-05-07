@@ -55,10 +55,6 @@
   changed_when: false
   failed_when: false
 
-- hosts: all
-remote_user: root
-become: true
-tasks:
 - name: cp -rfT /etc/skel /root
   ansible.builtin.raw: |
     set -eu
