@@ -2,13 +2,7 @@
 - hosts: all
   remote_user: root
   become: true
-  tasks:
-    - name: include role
-      ansible.builtin.include_role:
-        name: openjdk
-      tags: openjdk
-
-    - name: include role
-      ansible.builtin.include_role:
-        name: ansible-role-confluence
-      tags: confluence
+  roles:
+    - role: buluma.bootstrap
+    - role: buluma.java
+    - role: ansible-role-confluence
