@@ -3,6 +3,4 @@
   remote_user: root
   become: true
   roles:
-    - role: buluma.bootstrap
-    - role: buluma.java
     - role: ansible-role-confluence
