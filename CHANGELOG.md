@@ -2,7 +2,15 @@
 
 ## [Unreleased](https://github.com/buluma/ansible-role-confluence/tree/HEAD)
 
-[Full Changelog](https://github.com/buluma/ansible-role-confluence/compare/0.1.1...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-confluence/compare/0.1.2...HEAD)
+
+**Closed issues:**
+
+- add to tracker [\#2](https://github.com/buluma/ansible-role-confluence/issues/2)
+
+## [0.1.2](https://github.com/buluma/ansible-role-confluence/tree/0.1.2) (2022-05-07)
+
+[Full Changelog](https://github.com/buluma/ansible-role-confluence/compare/0.1.1...0.1.2)
 
 **Closed issues:**
 
