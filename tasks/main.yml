@@ -1,8 +1,8 @@
 ---
-- name: include default variables
+- name: Include default variables
   ansible.builtin.include_vars: "../vars/main.yml"
 
-- name: include release specific variables
+- name: Include release specific variables
   ansible.builtin.include_vars: "{{ _loop_var }}"
   loop: "{{ query('first_found', _params) }}"
   loop_control:
@@ -21,7 +21,7 @@
       skip: true
 
 # prepare system
-- name: redhat | subscription-manager register
+- name: Redhat | subscription-manager register
   ansible.builtin.raw: |
     set -eu
     subscription-manager register \
@@ -31,7 +31,7 @@
   changed_when: false
   failed_when: false
 
-- name: debian | apt-get install python3
+- name: Debian | apt-get install python3
   ansible.builtin.raw: |
     set -eu
     apt-get update
@@ -39,7 +39,7 @@
   changed_when: false
   failed_when: false
 
-- name: redhat | yum install python3
+- name: Redhat | yum install python3
   ansible.builtin.raw: |
     set -eu
     yum makecache
@@ -47,7 +47,7 @@
   changed_when: false
   failed_when: false
 
-- name: suse | zypper install python3
+- name: Suse | zypper install python3
   ansible.builtin.raw: |
     set -eu
     zypper -n --gpg-auto-import-keys refresh
@@ -55,14 +55,14 @@
   changed_when: false
   failed_when: false
 
-- name: cp -rfT /etc/skel /root
+- name: Cp -rfT /etc/skel /root
   ansible.builtin.raw: |
     set -eu
     cp -rfT /etc/skel /root
   changed_when: false
   failed_when: false
 
-- name: setenforce 0
+- name: Setenforce 0
   ansible.builtin.raw: |
     set -eu
     setenforce 0
@@ -70,7 +70,7 @@
   changed_when: false
   failed_when: false
 
-- name: systemctl stop firewalld.service
+- name: Systemctl stop firewalld.service
   ansible.builtin.raw: |
     set -eu
     systemctl stop firewalld.service
@@ -78,7 +78,7 @@
   changed_when: false
   failed_when: false
 
-- name: systemctl stop ufw.service
+- name: Systemctl stop ufw.service
   ansible.builtin.raw: |
     set -eu
     systemctl stop ufw.service
@@ -86,7 +86,7 @@
   changed_when: false
   failed_when: false
 
-- name: debian | apt-get install *.deb
+- name: Debian | apt-get install *.deb
   ansible.builtin.raw: |
     set -eu
     DEBIAN_FRONTEND=noninteractive apt-get install -y bzip2 ca-certificates curl gcc gnupg gzip hostname iproute2 passwd procps python3 python3-apt python3-jmespath python3-lxml python3-pip python3-setuptools python3-venv python3-virtualenv python3-wheel rsync sudo tar unzip util-linux xz-utils zip
@@ -94,7 +94,7 @@
   changed_when: false
   failed_when: false
 
-- name: fedora | yum install *.rpm
+- name: Fedora | yum install *.rpm
   ansible.builtin.raw: |
     set -eu
     yum install -y bzip2 ca-certificates curl gcc gnupg2 gzip hostname iproute procps-ng python3 python3-dnf-plugin-versionlock python3-jmespath python3-libselinux python3-lxml python3-pip python3-setuptools python3-virtualenv python3-wheel rsync shadow-utils sudo tar unzip util-linux xz yum-utils zip
@@ -102,7 +102,7 @@
   changed_when: false
   failed_when: false
 
-- name: redhat-9 | yum install *.rpm
+- name: Redhat-9 | yum install *.rpm
   ansible.builtin.raw: |
     set -eu
     yum-config-manager --enable crb || echo $?
@@ -113,7 +113,7 @@
   changed_when: false
   failed_when: false
 
-- name: redhat-8 | yum install *.rpm
+- name: Redhat-8 | yum install *.rpm
   ansible.builtin.raw: |
     set -eu
     yum install -y http://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
@@ -122,7 +122,7 @@
   changed_when: false
   failed_when: false
 
-- name: redhat-7 | yum install *.rpm
+- name: Redhat-7 | yum install *.rpm
   ansible.builtin.raw: |
     set -eu
     subscription-manager repos --enable=rhel-7-server-optional-rpms || echo $?
@@ -132,7 +132,7 @@
   changed_when: false
   failed_when: false
 
-- name: suse | zypper -n install *.rpm
+- name: Suse | zypper -n install *.rpm
   ansible.builtin.raw: |
     set -eu
     zypper -n install -y bzip2 ca-certificates curl gcc gpg2 gzip hostname iproute2 procps python3 python3-jmespath python3-lxml python3-pip python3-setuptools python3-virtualenv python3-wheel rsync shadow sudo tar unzip util-linux xz zip
@@ -141,7 +141,7 @@
   failed_when: false
 
 
-- name: include release specific tasks
+- name: Include release specific tasks
   ansible.builtin.include_tasks: "{{ _loop_var }}"
   loop: "{{ query('first_found', _params) }}"
   loop_control:
@@ -159,13 +159,13 @@
         - "."
       skip: true
 
-- name: groupadd
+- name: Groupadd
   ansible.builtin.group:
     name: "{{ confluence_group }}"
     system: true
     state: "present"
 
-- name: useradd
+- name: Useradd
   ansible.builtin.user:
     name: "{{ confluence_owner }}"
     group: "{{ confluence_group }}"
@@ -175,7 +175,7 @@
     create_home: false
     state: "present"
 
-- name: prepare directories
+- name: Prepare directories
   ansible.builtin.file:
     dest: "{{ item.dest }}"
     owner: "{{ item.owner | default('root') }}"
@@ -197,7 +197,7 @@
       owner: "{{ confluence_owner }}"
       group: "{{ confluence_group }}"
 
-- name: download archive
+- name: Download archive
   ansible.builtin.shell: |
     set -euxo pipefail
     mkdir -p /var/log/ansible
@@ -219,7 +219,7 @@
   register: result
   until: result is succeeded
 
-- name: unarchive package
+- name: Unarchive package
   ansible.builtin.shell: |
     set -euxo pipefail
     mkdir -p /var/log/ansible
@@ -243,10 +243,10 @@
     executable: "/bin/bash"
     creates: "/var/log/ansible/{{ confluence_download.checksum }}-unarchive.log"
   notify:
-    - confluence | systemctl daemon-reload
-    - confluence | systemctl restart confluence.service
+    - Confluence | systemctl daemon-reload
+    - Confluence | systemctl restart confluence.service
 
-- name: copy templates
+- name: Copy templates
   ansible.builtin.template:
     dest: "{{ item.dest }}"
     src: "{{ item.src | default('./templates' + item.dest + '.j2') }}"
@@ -265,10 +265,10 @@
       owner: "{{ confluence_owner }}"
       group: "{{ confluence_group }}"
   notify:
-    - confluence | systemctl daemon-reload
-    - confluence | systemctl restart confluence.service
+    - Confluence | systemctl daemon-reload
+    - Confluence | systemctl restart confluence.service
 
-- name: prepare files
+- name: Prepare files
   ansible.builtin.file:
     dest: "{{ item.dest }}"
     owner: "{{ item.owner | default('root') }}"
@@ -285,10 +285,10 @@
       owner: "{{ confluence_owner }}"
       group: "{{ confluence_group }}"
   notify:
-    - confluence | systemctl daemon-reload
-    - confluence | systemctl restart confluence.service
+    - Confluence | systemctl daemon-reload
+    - Confluence | systemctl restart confluence.service
 
-- name: patch {{ confluence_catalina }}/confluence/WEB-INF/web.xml
+- name: Patch {{ confluence_catalina }}/confluence/WEB-INF/web.xml
   vars:
     ansible_python_interpreter: "python3"
   community.general.xml:
@@ -299,12 +299,12 @@
     value: "{{ confluence_session_timeout | int }}"
     state: "present"
   notify:
-    - confluence | systemctl restart confluence.service
+    - Confluence | systemctl restart confluence.service
 
-- name: flush handlers
+- name: Flush handlers
   ansible.builtin.meta: flush_handlers
 
-- name: systemctl start confluence.service
+- name: Systemctl start confluence.service
   ansible.builtin.service:
     name: "confluence.service"
     state: "started"
