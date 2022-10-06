@@ -47,7 +47,7 @@ jobs:
           - image: "enterpriselinux"
             tag: "7"
           - image: "enterpriselinux"
-            tag: "latest"
+            tag: "8"
           - image: "debian-systemd"
             tag: "latest"
           - image: "debian-systemd"

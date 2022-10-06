@@ -12,7 +12,7 @@ galaxy_info:
         - all
     - name: EL
       versions:
-        - all
+        - "7"
     - name: opensuse
       versions:
         - all
