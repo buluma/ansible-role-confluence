@@ -1,4 +1,4 @@
-# [confluence](#confluence)
+# [Ansible role confluence](#confluence)
 
 Ansible Role for Atlassian Confluence Installation
 
