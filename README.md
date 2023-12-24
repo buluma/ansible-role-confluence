@@ -1,10 +1,10 @@
-# [Ansible role confluence](#confluence)
+# Ansible role [confluence](https://galaxy.ansible.com/ui/standalone/roles/buluma/confluence/documentation)
 
 Ansible Role for Atlassian Confluence Installation
 
-|GitHub|Version|Issues|Pull Requests|
-|------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-confluence/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-confluence/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-confluence.svg)](https://github.com/buluma/ansible-role-confluence/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-confluence.svg)](https://github.com/buluma/ansible-role-confluence/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-confluence.svg)](https://github.com/buluma/ansible-role-confluence/pulls/)|
+|GitHub|Version|Issues|Pull Requests|Downloads|
+|------|-------|------|-------------|---------|
+|[![github](https://github.com/buluma/ansible-role-confluence/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-confluence/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-confluence.svg)](https://github.com/buluma/ansible-role-confluence/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-confluence.svg)](https://github.com/buluma/ansible-role-confluence/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-confluence.svg)](https://github.com/buluma/ansible-role-confluence/pulls/)|[![Ansible Role](https://img.shields.io/ansible/role/d/buluma/confluence)](https://galaxy.ansible.com/ui/standalone/roles/buluma/confluence/documentation)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -139,13 +139,11 @@ If you find issues, please register them in [GitHub](https://github.com/buluma/a
 
 ## [License](#license)
 
-[Apache-2.0](https://github.com/buluma/ansible-role-confluence/blob/master/LICENSE).
+[Apache-2.0](https://github.com/buluma/ansible-role-confluence/blob/master/LICENSE)
 
 ## [Author Information](#author-information)
 
-[buluma](https://buluma.github.io/)
+[Shadow Walker](https://buluma.github.io/)
 
-
-### [Special Thanks](#special-thanks)
 
 Template inspired by [Robert de Bock](https://github.com/robertdebock)
