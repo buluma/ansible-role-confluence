@@ -6,6 +6,7 @@
 
 **Closed issues:**
 
+- Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#13](https://github.com/buluma/ansible-role-confluence/issues/13)
 - add to tracker [\#2](https://github.com/buluma/ansible-role-confluence/issues/2)
 
 ## [0.1.2](https://github.com/buluma/ansible-role-confluence/tree/0.1.2) (2022-05-07)
