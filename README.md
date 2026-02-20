@@ -12,7 +12,8 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 
 ```yaml
 ---
-- hosts: all
+- name: Converge
+  hosts: all
   remote_user: root
   become: true
   roles:
@@ -25,8 +26,8 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
 ---
 - name: Prepare
   hosts: all
-  become: yes
-  gather_facts: no
+  become: true
+  gather_facts: false
 
   roles:
     - role: buluma.bootstrap
@@ -80,7 +81,6 @@ confluence_catalina_connector_proxyport:
 confluence_catalina_connector_scheme: "http"
 confluence_catalina_connector_secure: "false"
 confluence_catalina_context_path:
-
 # Atlassian Support recommended JVM arguments.
 confluence_jvm_support_recommended_args: >-
   -Datlassian.plugins.enable.wait=300

@@ -1,0 +1,2 @@
+ansible-role-confluence [generator]: ERROR: Unhandled exception when retrieving 'DEFAULT_LOCAL_TMP': [Errno 1] Operation not permitted: '/Users/shadowwalker/.ansible/tmp/ansible-local-83196a791jrqb'
+ansible-role-confluence [ansible-lint]: [35mtasks/redhat.yml[0m:2:1 [2mTask/Handler: Yum install[0m [0m [31m[34m]8;;https://docs.ansible.com/projects/lint/rules/name/\name[prefix]]8;;\[0m[2m:[0m [31mTask name should start with 'suse | '.[0m [35mtasks/suse.yml[0m:2:1 [2mTask/Handler: Zypper install[0m [0m 
