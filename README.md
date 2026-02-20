@@ -75,11 +75,11 @@ confluence_jvm_minimum_memory: "2048m"
 confluence_jvm_maximum_memory: "2048m"
 
 # Proxy and context path setup.
-confluence_catalina_connector_proxyname: ~
-confluence_catalina_connector_proxyport: ~
+confluence_catalina_connector_proxyname:
+confluence_catalina_connector_proxyport:
 confluence_catalina_connector_scheme: "http"
 confluence_catalina_connector_secure: "false"
-confluence_catalina_context_path: ~
+confluence_catalina_context_path:
 
 # Atlassian Support recommended JVM arguments.
 confluence_jvm_support_recommended_args: >-
