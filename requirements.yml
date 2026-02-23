@@ -1,7 +1,7 @@
 ---
 roles:
-  - name: buluma.bootstrap
-  - name: buluma.java
+- name: buluma.bootstrap
+- name: buluma.java
 
 collections:
-  - name: community.general
+- name: community.general

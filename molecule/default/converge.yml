@@ -1,7 +1,7 @@
 ---
-  - name: Converge
-    hosts: all
-    remote_user: root
-    become: true
-    roles:
-      - role: buluma.confluence
+- name: Converge
+  hosts: all
+  remote_user: root
+  become: true
+  roles:
+  - role: buluma.confluence
