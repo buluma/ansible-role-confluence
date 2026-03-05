@@ -11,6 +11,12 @@
 - rebuild action [\#11](https://github.com/buluma/ansible-role-confluence/issues/11)
 - add to tracker [\#2](https://github.com/buluma/ansible-role-confluence/issues/2)
 
+**Merged pull requests:**
+
+- Bump actions/setup-python from 5 to 6 [\#16](https://github.com/buluma/ansible-role-confluence/pull/16) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump buluma/molecule-action from 5.0.1 to 5.0.4 [\#9](https://github.com/buluma/ansible-role-confluence/pull/9) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump buluma/galaxy-action from 1.0.3 to 6.25.22 [\#6](https://github.com/buluma/ansible-role-confluence/pull/6) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [0.1.2](https://github.com/buluma/ansible-role-confluence/tree/0.1.2) (2022-05-07)
 
 [Full Changelog](https://github.com/buluma/ansible-role-confluence/compare/0.1.1...0.1.2)
