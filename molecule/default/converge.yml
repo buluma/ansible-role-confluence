@@ -4,4 +4,4 @@
   remote_user: root
   become: true
   roles:
-  - role: buluma.confluence
+    - role: buluma.confluence
