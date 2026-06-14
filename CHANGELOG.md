@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/buluma/ansible-role-confluence/tree/HEAD)
+## [26.6.0](https://github.com/buluma/ansible-role-confluence/tree/26.6.0) (2026-06-14)
 
-[Full Changelog](https://github.com/buluma/ansible-role-confluence/compare/0.1.2...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-confluence/compare/0.1.2...26.6.0)
 
 **Closed issues:**
 
@@ -13,7 +13,6 @@
 
 **Merged pull requests:**
 
-- Bump actions/setup-python from 5 to 6 [\#16](https://github.com/buluma/ansible-role-confluence/pull/16) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump buluma/molecule-action from 5.0.1 to 5.0.4 [\#9](https://github.com/buluma/ansible-role-confluence/pull/9) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump buluma/galaxy-action from 1.0.3 to 6.25.22 [\#6](https://github.com/buluma/ansible-role-confluence/pull/6) ([dependabot[bot]](https://github.com/apps/dependabot))
 
@@ -27,6 +26,7 @@
 
 **Merged pull requests:**
 
+- Bump actions/setup-python from 5 to 6 [\#16](https://github.com/buluma/ansible-role-confluence/pull/16) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bootstrap [\#5](https://github.com/buluma/ansible-role-confluence/pull/5) ([buluma](https://github.com/buluma))
 
 ## [0.1.1](https://github.com/buluma/ansible-role-confluence/tree/0.1.1) (2022-04-23)
