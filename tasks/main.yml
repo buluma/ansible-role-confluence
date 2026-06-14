@@ -295,6 +295,13 @@
     - Confluence | systemctl daemon-reload
     - Confluence | systemctl restart confluence.service
 
+- name: Ensure lxml is available for XML module
+  ansible.builtin.pip:
+    name: lxml
+    state: present
+  changed_when: false
+  failed_when: false
+
 - name: Patch web.xml in {{ confluence_catalina ~ '/confluence/WEB-INF/web.xml' }}
   vars:
     ansible_python_interpreter: "python3"
