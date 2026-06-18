@@ -1,5 +1,13 @@
 # Changelog
 
+## [26.6.1](https://github.com/buluma/ansible-role-confluence/tree/26.6.1) (2026-06-14)
+
+[Full Changelog](https://github.com/buluma/ansible-role-confluence/compare/26.6.0...26.6.1)
+
+**Closed issues:**
+
+- Pinning due to CVE-2024-3094 [\#15](https://github.com/buluma/ansible-role-confluence/issues/15)
+
 ## [26.6.0](https://github.com/buluma/ansible-role-confluence/tree/26.6.0) (2026-06-14)
 
 [Full Changelog](https://github.com/buluma/ansible-role-confluence/compare/0.1.2...26.6.0)
